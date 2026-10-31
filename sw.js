@@ -1,7 +1,7 @@
 // Service worker: сохраняет само приложение, чтобы оно открывалось даже без интернета.
 // Погоду всегда берём свежую из сети.
-const CACHE = "pogodka-v1";
-const FILES = ["./", "./index.html", "./manifest.webmanifest", "./icons/icon-192.png", "./icons/icon-512.png", "./icons/apple-touch-icon.png"];
+const CACHE = "pogodka-v2";
+const FILES = ["./", "./index.html", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png", "./apple-touch-icon.png"];
 
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)));
